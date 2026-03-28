@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+/* Semantic palette — toggled via html.light / html.dark (see index.html + ThemeProvider) */
+html.dark {
+  color-scheme: dark;
+  --surface: #000000;
+  --elevated: #050505;
+  --foreground: #ffffff;
+  --muted: #a1a1aa;
+  --border: rgb(255 255 255 / 0.1);
+  --border-strong: rgb(255 255 255 / 0.15);
+  --card: rgb(255 255 255 / 0.03);
+  --card-hover: rgb(255 255 255 / 0.06);
+  --input-bg: rgb(0 0 0 / 0.4);
+  --nav-scrolled: rgb(0 0 0 / 0.6);
+  --hero-fade: rgb(255 255 255 / 0.04);
+  --spotlight: rgb(255 255 255 / 0.08);
+  --pill-bg: rgb(255 255 255 / 0.05);
+  --shadow-portrait: rgb(0 0 0 / 0.5);
+  --gradient-line-from: rgb(255 255 255 / 0.2);
+  --gradient-line-via: rgb(255 255 255 / 0.1);
+  --timeline-dot-border: rgb(255 255 255 / 0.3);
+  --timeline-dot-bg: #000000;
+  --overlay-image: rgb(0 0 0 / 0.6);
+  --avatar-gradient-from: rgb(255 255 255 / 0.2);
+  --avatar-gradient-to: rgb(255 255 255 / 0.05);
+  --dot-grid: rgba(255, 255, 255, 0.12);
+}
+
+html.light {
+  color-scheme: light;
+  --surface: #fafafa;
+  --elevated: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #52525b;
+  --border: rgb(0 0 0 / 0.08);
+  --border-strong: rgb(0 0 0 / 0.12);
+  --card: rgb(0 0 0 / 0.02);
+  --card-hover: rgb(0 0 0 / 0.04);
+  --input-bg: rgb(255 255 255 / 0.95);
+  --nav-scrolled: rgb(255 255 255 / 0.72);
+  --hero-fade: rgb(0 0 0 / 0.03);
+  --spotlight: rgb(0 0 0 / 0.06);
+  --pill-bg: rgb(0 0 0 / 0.04);
+  --shadow-portrait: rgb(0 0 0 / 0.12);
+  --gradient-line-from: rgb(0 0 0 / 0.12);
+  --gradient-line-via: rgb(0 0 0 / 0.06);
+  --timeline-dot-border: rgb(0 0 0 / 0.2);
+  --timeline-dot-bg: #ffffff;
+  --overlay-image: rgb(0 0 0 / 0.35);
+  --avatar-gradient-from: rgb(0 0 0 / 0.08);
+  --avatar-gradient-to: rgb(0 0 0 / 0.03);
+  --dot-grid: rgba(0, 0, 0, 0.1);
+}
+
+/* Default before inline script runs */
+html:not(.light):not(.dark) {
+  color-scheme: dark;
+  --surface: #000000;
+  --foreground: #ffffff;
+  --muted: #a1a1aa;
+  --border: rgb(255 255 255 / 0.1);
+  --border-strong: rgb(255 255 255 / 0.15);
+  --card: rgb(255 255 255 / 0.03);
+  --card-hover: rgb(255 255 255 / 0.06);
+  --input-bg: rgb(0 0 0 / 0.4);
+  --nav-scrolled: rgb(0 0 0 / 0.6);
+  --hero-fade: rgb(255 255 255 / 0.04);
+  --spotlight: rgb(255 255 255 / 0.08);
+  --pill-bg: rgb(255 255 255 / 0.05);
+  --shadow-portrait: rgb(0 0 0 / 0.5);
+  --gradient-line-from: rgb(255 255 255 / 0.2);
+  --gradient-line-via: rgb(255 255 255 / 0.1);
+  --timeline-dot-border: rgb(255 255 255 / 0.3);
+  --timeline-dot-bg: #000000;
+  --overlay-image: rgb(0 0 0 / 0.6);
+  --avatar-gradient-from: rgb(255 255 255 / 0.2);
+  --avatar-gradient-to: rgb(255 255 255 / 0.05);
+  --dot-grid: rgba(255, 255, 255, 0.12);
+}
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-card: var(--card);
+  --color-input: var(--input-bg);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-foreground font-sans antialiased;
+    margin: 0;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--foreground) 18%, transparent);
+    color: var(--foreground);
+  }
+}
+
+@utility font-serif-display {
+  font-family: 'Playfair Display', ui-serif, Georgia, serif;
+}
