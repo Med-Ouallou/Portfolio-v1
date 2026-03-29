@@ -55,9 +55,9 @@ export function Home() {
       <main>
         <Hero />
         <About />
+        <TechStack categories={skillCategories} />
         <Projects projects={projects} />
         <Testimonials items={testimonials} />
-        <TechStack categories={skillCategories} />
         <Experience entries={experience} />
         <Contact email={profile.email} socials={socialLinks} />
         <Footer

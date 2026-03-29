@@ -1,7 +1,7 @@
 import { FiArrowRight, FiDownload } from 'react-icons/fi'
 import { Container } from '../components/Container'
 import { Button } from '../components/Button'
-import { SplitHeroTitle, BorderGlow, CurvedLoop } from '../components/reactbits'
+import { SplitHeroTitle, BorderGlow, CurvedLoop, TextType } from '../components/reactbits'
 import { motion } from 'framer-motion'
 import { heroTags, profile } from '../data/site'
 
@@ -15,10 +15,14 @@ export function Hero() {
 
       <Container className="relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-16">
-          <div className="space-y-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted decoration-foreground/20">
-              {profile.role}
-            </p>
+          <div className="space-y-7">
+            <TextType
+              text="Hello! i am mohamed"
+              className="text-3xl font-semibold uppercase tracking-[0.3em] text-muted decoration-foreground/20"
+              showCursor={true}
+              cursorCharacter="✦"
+              typingSpeed={100}
+            />
             <SplitHeroTitle
               lead={profile.heroHeadline.lead}
               emphasis={profile.heroHeadline.emphasis}
@@ -64,7 +68,7 @@ export function Hero() {
             {heroTags.map((tag) => (
               <span
                 key={tag.label}
-                className={`absolute z-20 hidden rounded-full border border-border-strong bg-[var(--nav-scrolled)] px-3 py-1.5 text-xs text-foreground shadow-lg backdrop-blur-md sm:inline-block ${tag.position}`}
+                className={`absolute z-20 hidden rounded-full border border-border-strong bg-foreground px-3 py-1.5 text-xs text-surface shadow-lg backdrop-blur-md sm:inline-block ${tag.position}`}
               >
                 {tag.label}
               </span>

@@ -16,7 +16,7 @@ export function SectionHeader({
   return (
     <div className={`mb-10 space-y-4 sm:mb-14 ${className}`}>
       {eyebrow ? (
-        <span className="inline-flex rounded-full border border-border-strong px-3 py-1 text-xs font-medium uppercase tracking-wider text-muted">
+        <span className="inline-flex rounded-full border border-border-strong bg-foreground px-3 py-1 text-xs font-medium uppercase tracking-wider text-surface">
           {eyebrow}
         </span>
       ) : null}
