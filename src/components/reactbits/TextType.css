@@ -1,0 +1,11 @@
+/* React Bits — TextType (source: DavidHDev/react-bits, themed for this app) */
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}

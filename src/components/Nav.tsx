@@ -40,10 +40,10 @@ export function Nav({ items }: Props) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background,backdrop-filter,border-color] duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background,backdrop-filter,border-color] duration-300 backdrop-blur-md ${
         scrolled
-          ? 'border-b border-border bg-[var(--nav-scrolled)] backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent'
+          ? 'border-border bg-[var(--nav-scrolled)]'
+          : 'border-transparent bg-[var(--nav-scrolled)]'
       }`}
     >
       <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">

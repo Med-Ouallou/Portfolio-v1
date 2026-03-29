@@ -8,7 +8,7 @@ html.dark {
   --foreground: #ffffff;
   --muted: #a1a1aa;
   --border: rgb(255 255 255 / 0.1);
-  --border-strong: rgb(255 255 255 / 0.15);
+  --border-strong: rgb(255 255 255 / 0.3);
   --card: rgb(255 255 255 / 0.03);
   --card-hover: rgb(255 255 255 / 0.06);
   --input-bg: rgb(0 0 0 / 0.4);

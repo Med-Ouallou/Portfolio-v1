@@ -16,6 +16,7 @@ type Dot = {
   cy: number
   xOffset: number
   yOffset: number
+  opacity: number
   _inertiaApplied: boolean
 }
 
@@ -119,6 +120,7 @@ export function DotGrid({
     lastX: 0,
     lastY: 0,
   })
+  const parallaxRef = useRef({ x: 0, y: 0 })
 
   const baseRgb = useMemo(() => hexToRgb(baseColor), [baseColor])
   const activeRgb = useMemo(() => hexToRgb(activeColor), [activeColor])
@@ -164,7 +166,7 @@ export function DotGrid({
       for (let x = 0; x < cols; x++) {
         const cx = startX + x * cell
         const cy = startY + y * cell
-        dots.push({ cx, cy, xOffset: 0, yOffset: 0, _inertiaApplied: false })
+        dots.push({ cx, cy, xOffset: 0, yOffset: 0, opacity: 0.3, _inertiaApplied: false })
       }
     }
     dotsRef.current = dots
@@ -181,20 +183,25 @@ export function DotGrid({
       if (!canvas) return
       const ctx = canvas.getContext('2d')
       if (!ctx) return
+
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       const { x: px, y: py } = pointerRef.current
+      const parallax = parallaxRef.current
 
       for (const dot of dotsRef.current) {
-        const ox = dot.cx + dot.xOffset
-        const oy = dot.cy + dot.yOffset
+        const ox = dot.cx + dot.xOffset + parallax.x
+        const oy = dot.cy + dot.yOffset + parallax.y
         const dx = dot.cx - px
         const dy = dot.cy - py
         const dsq = dx * dx + dy * dy
 
+        const dist = Math.sqrt(dsq)
+        const targetOpacity = dsq <= proxSq ? 0.3 + (0.7 * (1 - dist / proximity)) : 0.3
+        dot.opacity += (targetOpacity - dot.opacity) * 0.1
+
         let style: string = baseColor
         if (dsq <= proxSq) {
-          const dist = Math.sqrt(dsq)
           const t = 1 - dist / proximity
           const r = Math.round(
             baseRgb.r + (activeRgb.r - baseRgb.r) * t,
@@ -209,6 +216,7 @@ export function DotGrid({
         }
 
         ctx.save()
+        ctx.globalAlpha = dot.opacity
         ctx.translate(ox, oy)
         ctx.fillStyle = style
         ctx.fill(circlePath)
@@ -262,6 +270,16 @@ export function DotGrid({
       const rect = canvas.getBoundingClientRect()
       pr.x = e.clientX - rect.left
       pr.y = e.clientY - rect.top
+
+      // Parallax — shift dots based on cursor position relative to center
+      const centerX = window.innerWidth / 2
+      const centerY = window.innerHeight / 2
+      gsap.to(parallaxRef.current, {
+        x: ((e.clientX - centerX) / centerX) * 12,
+        y: ((e.clientY - centerY) / centerY) * 12,
+        duration: 0.6,
+        ease: 'power2.out',
+      })
 
       for (const dot of dotsRef.current) {
         const dist = Math.hypot(dot.cx - pr.x, dot.cy - pr.y)

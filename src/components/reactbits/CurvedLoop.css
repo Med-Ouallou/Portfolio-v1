@@ -1,0 +1,28 @@
+/* React Bits — CurvedLoop (source: DavidHDev/react-bits, themed for this app) */
+.curved-loop-jacket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 3.5rem;
+  fill: var(--foreground);
+  opacity: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.curved-loop-svg .curved-loop-text {
+  font-weight: 700;
+  font-size: 3.5rem;
+  fill: var(--foreground);
+}

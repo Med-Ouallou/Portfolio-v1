@@ -1,7 +1,7 @@
 import { FiCode, FiCpu, FiLayers } from 'react-icons/fi'
 import { Container } from '../components/Container'
 import { SectionHeader } from '../components/SectionHeader'
-import { ScrollReveal, SpotlightCard } from '../components/reactbits'
+import { ScrollReveal, SpotlightCard, BorderGlow, TextType } from '../components/reactbits'
 import { profile } from '../data/site'
 
 const highlights = [
@@ -27,19 +27,34 @@ export function About() {
     <section id="about" className="scroll-mt-24 py-20 sm:py-28">
       <Container>
         <ScrollReveal>
-          <SectionHeader
-            eyebrow="About"
-            title={
-              <>
-                Building products with{' '}
-                <span className="font-serif-display italic text-foreground/90">
-                  precision
-                </span>{' '}
-                and care.
-              </>
-            }
-            description={profile.bio}
-          />
+          <div className="flex items-start gap-30">
+            <SectionHeader
+              eyebrow="About"
+              title={
+                <TextType
+                  text={['Welcome to my portfolio!', 'Good to see you!']}
+                  typingSpeed={60}
+                  pauseDuration={1500}
+                  deletingSpeed={30}
+                  cursorCharacter="|"
+                  className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+                />
+              }
+              description={profile.bio}
+            />
+            <BorderGlow
+              borderRadius={9999}
+              glowRadius={40}
+              colors={['#818cf8', '#c084fc', '#f472b6']}
+              className="shrink-0"
+            >
+              <img
+                src={profile.portraitSrc}
+                alt={`${profile.name} ${profile.surname}`}
+                className="h-50 w-50 rounded-full object-cover"
+              />
+            </BorderGlow>
+          </div>
         </ScrollReveal>
 
         <div className="grid gap-4 md:grid-cols-3">

@@ -53,7 +53,7 @@ export const profile = {
   location: 'Remote / Worldwide',
   bio: `I'm a fullstack developer who bridges product thinking with solid engineering. I enjoy turning ambiguous problems into clear systems, clean APIs, and interfaces that feel effortless.`,
   resumeUrl: '#',
-  portraitSrc: '/avatar-placeholder.svg',
+  portraitSrc: '/img-2.jpg',
 }
 
 export const navItems: NavItem[] = [

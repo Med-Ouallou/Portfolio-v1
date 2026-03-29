@@ -1,15 +1,15 @@
 import { FiArrowRight, FiDownload } from 'react-icons/fi'
 import { Container } from '../components/Container'
 import { Button } from '../components/Button'
-import { DotGrid, SplitHeroTitle } from '../components/reactbits'
+import { SplitHeroTitle, BorderGlow, CurvedLoop } from '../components/reactbits'
 import { motion } from 'framer-motion'
-import { heroTags, logoRow, profile } from '../data/site'
+import { heroTags, profile } from '../data/site'
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24 lg:pt-36"
+      className="relative overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-24 lg:pt-28"
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[var(--hero-fade)] to-transparent" />
 
@@ -45,17 +45,22 @@ export function Hero() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="relative mx-auto w-full max-w-sm lg:max-w-none"
           >
-            <div className="relative aspect-square overflow-hidden rounded-3xl border border-border bg-card shadow-2xl shadow-[var(--shadow-portrait)]">
-              <DotGrid className="opacity-50" gap={20} />
-              <img
-                src={profile.portraitSrc}
-                alt={`${profile.name} ${profile.surname}`}
-                width={480}
-                height={480}
-                className="relative z-10 h-full w-full object-cover"
-                loading="eager"
-              />
-            </div>
+            <BorderGlow
+              borderRadius={24}
+              glowRadius={50}
+              colors={['#818cf8', '#c084fc', '#f472b6']}
+            >
+              <div className="relative aspect-square overflow-hidden rounded-3xl bg-card">
+                <img
+                  src={profile.portraitSrc}
+                  alt={`${profile.name} ${profile.surname}`}
+                  width={480}
+                  height={480}
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                />
+              </div>
+            </BorderGlow>
             {heroTags.map((tag) => (
               <span
                 key={tag.label}
@@ -66,23 +71,16 @@ export function Hero() {
             ))}
           </motion.div>
         </div>
-
-        <div className="mt-16 border-t border-white/10 pt-10 sm:mt-20">
-          <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.25em] text-muted">
-            Trusted by leading teams
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-50 grayscale">
-            {logoRow.map((name) => (
-              <span
-                key={name}
-                className="text-sm font-semibold tracking-tight text-foreground"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
-        </div>
       </Container>
+
+      <div className="relative z-10 mt-16 sm:mt-20">
+        <CurvedLoop
+          marqueeText="React ✦ TypeScript ✦ Node.js ✦ Next.js ✦ Tailwind ✦ PostgreSQL ✦ "
+          speed={3}
+          curveAmount={200}
+          className="curved-loop-text"
+        />
+      </div>
     </section>
   )
 }
