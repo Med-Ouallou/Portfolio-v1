@@ -58,10 +58,12 @@ export const profile = {
 }
 
 export const navItems: NavItem[] = [
-  { label: 'projects', href: '#projects' },
+  { label: 'home', href: '#hero' },
   { label: 'about', href: '#about' },
+  { label: 'stack', href: '#stack' },
+  { label: 'projects', href: '#projects' },
+  { label: 'experience', href: '#experience' },
   { label: 'contact', href: '#contact' },
-  { label: 'journal', href: '#journal' },
 ]
 
 export const heroTags = [

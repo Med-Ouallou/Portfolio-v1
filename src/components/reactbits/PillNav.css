@@ -6,15 +6,17 @@
   right: 0;
   z-index: 50;
   padding: 12px 24px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 html.light .pill-nav-container {
-  background: rgba(255, 255, 255, 0.72);
-  border-bottom: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .pill-nav {

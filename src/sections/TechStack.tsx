@@ -43,7 +43,7 @@ type Props = {
 
 export function TechStack({ categories }: Props) {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="stack" className="py-20 sm:py-28">
       <Container>
         <ScrollReveal>
           <SectionHeader

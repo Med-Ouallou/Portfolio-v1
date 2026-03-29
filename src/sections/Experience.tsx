@@ -9,7 +9,7 @@ type Props = {
 
 export function Experience({ entries }: Props) {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="experience" className="py-20 sm:py-28">
       <Container>
         <ScrollReveal>
           <SectionHeader
