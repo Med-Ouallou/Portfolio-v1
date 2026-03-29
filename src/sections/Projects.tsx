@@ -1,6 +1,7 @@
 import { FiArrowUpRight } from 'react-icons/fi'
 import { Container } from '../components/Container'
 import { SectionHeader } from '../components/SectionHeader'
+import { Button } from '../components/Button'
 import {
   ScrollReveal,
   SpotlightCard,
@@ -35,7 +36,7 @@ export function Projects({ projects }: Props) {
         <div className="flex flex-col gap-12 sm:gap-16">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} delay={0.05 * (index % 3)}>
-              <SpotlightCard className="flush overflow-hidden border border-border !bg-transparent">
+               <SpotlightCard className="flush overflow-hidden border border-border !bg-elevated">
                 <div className="grid gap-0 lg:grid-cols-2">
                   <div className="flex flex-col justify-center gap-6 p-6 sm:p-8 lg:p-10 lg:order-2">
                     <div>
@@ -50,7 +51,7 @@ export function Projects({ projects }: Props) {
                       {project.tech.map((t) => (
                         <span
                           key={t}
-                          className="rounded-full border border-border-strong px-3 py-1 text-xs text-muted"
+                          className="rounded-full border border-border-strong bg-foreground px-3 py-1 text-xs text-surface"
                         >
                           {t}
                         </span>
@@ -67,15 +68,6 @@ export function Projects({ projects }: Props) {
                             className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                             aria-hidden
                           />
-                        </a>
-                      ) : null}
-                      {project.caseStudyUrl ? (
-                        <a
-                          href={project.caseStudyUrl}
-                          className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
-                        >
-                          Case study
-                          <FiArrowUpRight className="h-4 w-4" aria-hidden />
                         </a>
                       ) : null}
                     </div>
@@ -95,22 +87,6 @@ export function Projects({ projects }: Props) {
                           showTooltip={false}
                           scaleOnHover={1.02}
                           rotateAmplitude={10}
-                          displayOverlayContent={Boolean(project.liveUrl)}
-                          overlayContent={
-                            project.liveUrl ? (
-                              <div className="relative h-full w-full">
-                                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--overlay-image)] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                <a
-                                  href={project.liveUrl}
-                                  className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                >
-                                  <span className="rounded-full bg-foreground px-5 py-2 text-sm font-medium text-surface shadow-lg">
-                                    View live
-                                  </span>
-                                </a>
-                              </div>
-                            ) : null
-                          }
                         />
                       </div>
                     </div>
@@ -119,6 +95,13 @@ export function Projects({ projects }: Props) {
               </SpotlightCard>
             </ScrollReveal>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center sm:mt-16">
+          <Button href="/projects" variant="primary">
+            See all projects
+            <FiArrowUpRight className="h-4 w-4" aria-hidden />
+          </Button>
         </div>
       </Container>
     </section>

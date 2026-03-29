@@ -27,7 +27,7 @@ export function About() {
     <section id="about" className="scroll-mt-24 py-20 sm:py-28">
       <Container>
         <ScrollReveal>
-          <div className="flex items-start gap-30">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-12 lg:gap-20">
             <SectionHeader
               eyebrow="About"
               title={
@@ -51,7 +51,7 @@ export function About() {
               <img
                 src={profile.portraitSrc}
                 alt={`${profile.name} ${profile.surname}`}
-                className="h-50 w-50 rounded-full object-cover"
+                className="h-32 w-32 sm:h-40 sm:w-40 lg:h-50 lg:w-50 rounded-full object-cover"
               />
             </BorderGlow>
           </div>

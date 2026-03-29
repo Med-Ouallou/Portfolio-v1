@@ -18,7 +18,7 @@ export function Hero() {
           <div className="space-y-7">
             <TextType
               text="Hello! i am mohamed"
-              className="text-3xl font-semibold uppercase tracking-[0.3em] text-muted decoration-foreground/20"
+              className="text-xl font-semibold uppercase tracking-[0.2em] sm:text-2xl sm:tracking-[0.3em] lg:text-3xl text-muted"
               showCursor={true}
               cursorCharacter="✦"
               typingSpeed={100}

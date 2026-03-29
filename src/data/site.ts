@@ -35,12 +35,12 @@ export type SkillCategory = {
 export type SocialLink = {
   label: string
   href: string
-  icon: 'github' | 'linkedin' | 'twitter' | 'dribbble'
+  icon: 'github' | 'linkedin' | 'instagram'
 }
 
 export const profile = {
-  name: 'Mahmoud',
-  surname: 'Assegaf',
+  name: 'Mohamed',
+  surname: 'Ouallou',
   role: 'Fullstack Developer',
   tagline:
     'I ship production-ready apps with a focus on performance, accessibility, and polished UX.',
@@ -122,36 +122,6 @@ export const projects: Project[] = [
   },
 ]
 
-export const testimonials: Testimonial[] = [
-  {
-    id: 't1',
-    quote:
-      'Mahmoud shipped our dashboard ahead of schedule and the UX finally matches our brand.',
-    name: 'Sarah Chen',
-    role: 'Product Lead, Finscale',
-  },
-  {
-    id: 't2',
-    quote:
-      'Rare mix: communicates like a PM, codes like a senior, and cares about performance.',
-    name: 'James Okafor',
-    role: 'CTO, Northwind Labs',
-  },
-  {
-    id: 't3',
-    quote:
-      'Our Lighthouse scores jumped double digits after the refactor. Highly recommend.',
-    name: 'Elena Ruiz',
-    role: 'Engineering Manager',
-  },
-  {
-    id: 't4',
-    quote:
-      'Clear documentation, thoughtful API design, and zero drama across the engagement.',
-    name: 'Marcus Webb',
-    role: 'Founder, Studio Glyph',
-  },
-]
 
 export const experience: ExperienceEntry[] = [
   {
@@ -214,8 +184,7 @@ export const skillCategories: SkillCategory[] = [
 ]
 
 export const socialLinks: SocialLink[] = [
-  { label: 'GitHub', href: 'https://github.com', icon: 'github' },
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'linkedin' },
-  { label: 'Twitter', href: 'https://twitter.com', icon: 'twitter' },
-  { label: 'Dribbble', href: 'https://dribbble.com', icon: 'dribbble' },
+  { label: 'GitHub', href: 'https://github.com/Med-Ouallou', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohamed-ouallou-b3a46a28b/', icon: 'linkedin' },
+  { label: 'Instagram', href: 'https://www.instagram.com/med-ouallou/', icon: 'instagram' },
 ]

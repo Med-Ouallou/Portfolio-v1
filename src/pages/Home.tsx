@@ -4,7 +4,6 @@ import { Button } from '../components/Button'
 import { Hero } from '../sections/Hero'
 import { About } from '../sections/About'
 import { Projects } from '../sections/Projects'
-import { Testimonials } from '../sections/Testimonials'
 import { TechStack } from '../sections/TechStack'
 import { Experience } from '../sections/Experience'
 import { Contact } from '../sections/Contact'
@@ -18,7 +17,6 @@ import {
   projects,
   skillCategories,
   socialLinks,
-  testimonials,
 } from '../data/site'
 
 export function Home() {
@@ -57,7 +55,6 @@ export function Home() {
         <About />
         <TechStack categories={skillCategories} />
         <Projects projects={projects} />
-        <Testimonials items={testimonials} />
         <Experience entries={experience} />
         <Contact email={profile.email} socials={socialLinks} />
         <Footer
