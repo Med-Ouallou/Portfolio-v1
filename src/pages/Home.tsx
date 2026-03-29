@@ -23,7 +23,7 @@ export function Home() {
   return (
     <>
       <DotGrid fixed />
-      <BackToTop />
+      <BackToTop whatsapp={profile.whatsapp} />
       <PillNav
         logoText="MA"
         items={navItems}
@@ -33,7 +33,7 @@ export function Home() {
         hoveredPillTextColor="var(--surface)"
       >
         <div className="pill-nav-right">
-          <span className="hidden items-center gap-2 rounded-full border border-border bg-[var(--pill-bg)] px-3 py-1.5 text-xs text-muted sm:inline-flex">
+          <span className="hidden items-center gap-2 rounded-full border border-border bg-white/5 dark:bg-white/5 light:bg-black/5 px-3 py-1.5 text-xs text-muted sm:inline-flex">
             <span className="relative flex h-2 w-2" aria-hidden>
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />

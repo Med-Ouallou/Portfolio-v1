@@ -40,10 +40,10 @@ export function Nav({ items }: Props) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background,backdrop-filter,border-color] duration-300 backdrop-blur-md ${
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background,backdrop-filter,border-color] duration-300 backdrop-blur-md bg-black/60 dark:bg-black/60 light:bg-white/72 ${
         scrolled
-          ? 'border-border bg-[var(--nav-scrolled)]'
-          : 'border-transparent bg-[var(--nav-scrolled)]'
+          ? 'border-border'
+          : 'border-transparent'
       }`}
     >
       <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">
@@ -72,7 +72,7 @@ export function Nav({ items }: Props) {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
-          <span className="hidden items-center gap-2 rounded-full border border-border bg-[var(--pill-bg)] px-3 py-1.5 text-xs text-muted sm:inline-flex">
+          <span className="hidden items-center gap-2 rounded-full border border-border bg-white/5 dark:bg-white/5 light:bg-black/5 px-3 py-1.5 text-xs text-muted sm:inline-flex">
             <span
               className="relative flex h-2 w-2"
               aria-hidden

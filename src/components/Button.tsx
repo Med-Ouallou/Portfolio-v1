@@ -16,9 +16,9 @@ const variants: Record<Variant, string> = {
   primary:
     'bg-foreground text-surface shadow-lg shadow-black/20 dark:shadow-black/30',
   ghost:
-    'border border-border-strong bg-surface text-foreground hover:bg-[var(--nav-scrolled)] hover:backdrop-blur-md hover:border-foreground/20',
+    'border border-border-strong bg-surface text-foreground hover:bg-black/60 dark:hover:bg-black/60 light:hover:bg-white/72 hover:backdrop-blur-md hover:border-foreground/20',
   outline:
-    'border border-border bg-surface text-foreground hover:bg-[var(--nav-scrolled)] hover:backdrop-blur-md hover:border-foreground/20',
+    'border border-border bg-surface text-foreground hover:bg-black/60 dark:hover:bg-black/60 light:hover:bg-white/72 hover:backdrop-blur-md hover:border-foreground/20',
 }
 
 export function Button({

@@ -5,7 +5,7 @@ import { SectionHeader } from '../components/SectionHeader'
 import { Button } from '../components/Button'
 import { ScrollReveal, SpotlightCard } from '../components/reactbits'
 import type { SocialLink } from '../data/site'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 type Props = {
   email: string
@@ -20,6 +20,8 @@ const socialIcon = (icon: SocialLink['icon']) => {
       return FaLinkedin
     case 'instagram':
       return FaInstagram
+    case 'email':
+      return FaEnvelope
     default:
       return FaGithub
   }

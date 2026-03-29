@@ -2,7 +2,7 @@ import { Container } from '../components/Container'
 import { Button } from '../components/Button'
 import { DotGrid } from '../components/reactbits'
 import type { NavItem, SocialLink } from '../data/site'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 type Props = {
   name: string
@@ -20,6 +20,8 @@ const socialIcon = (icon: SocialLink['icon']) => {
       return FaLinkedin
     case 'instagram':
       return FaInstagram
+    case 'email':
+      return FaEnvelope
     default:
       return FaGithub
   }

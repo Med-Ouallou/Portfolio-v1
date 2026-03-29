@@ -35,7 +35,7 @@ export type SkillCategory = {
 export type SocialLink = {
   label: string
   href: string
-  icon: 'github' | 'linkedin' | 'instagram'
+  icon: 'github' | 'linkedin' | 'instagram' | 'email'
 }
 
 export const profile = {
@@ -49,7 +49,8 @@ export const profile = {
     emphasis: 'fast, scalable',
     tail: 'web experiences.',
   },
-  email: 'hello@example.com',
+  email: 'mouallou279@gmail.com',
+  whatsapp: '212776440786',
   location: 'Remote / Worldwide',
   bio: `I'm a fullstack developer who bridges product thinking with solid engineering. I enjoy turning ambiguous problems into clear systems, clean APIs, and interfaces that feel effortless.`,
   resumeUrl: '#',
@@ -186,5 +187,6 @@ export const skillCategories: SkillCategory[] = [
 export const socialLinks: SocialLink[] = [
   { label: 'GitHub', href: 'https://github.com/Med-Ouallou', icon: 'github' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohamed-ouallou-b3a46a28b/', icon: 'linkedin' },
-  { label: 'Instagram', href: 'https://www.instagram.com/med-ouallou/', icon: 'instagram' },
+  { label: 'Instagram', href: 'https://www.instagram.com/med.ouallou/', icon: 'instagram' },
+  { label: 'Email', href: 'mailto:mouallou279@gmail.com', icon: 'email' },
 ]
