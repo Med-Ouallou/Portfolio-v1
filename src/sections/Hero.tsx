@@ -36,7 +36,7 @@ export function Hero() {
                 View projects
                 <FiArrowRight className="h-4 w-4" aria-hidden />
               </Button>
-              <Button href={profile.resumeUrl} variant="ghost">
+              <Button href={profile.resumeUrl} variant="primary">
                 <FiDownload className="h-4 w-4" aria-hidden />
                 Download my resume
               </Button>

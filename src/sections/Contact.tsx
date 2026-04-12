@@ -80,7 +80,7 @@ export function Contact({ email, socials }: Props) {
                 .
               </>
             }
-            description={`Tell me about your product, timeline, and stack. I typically reply within two business days. Direct: ${email}`}
+            description={`Tell me about your product, timeline, and stack. I typically reply within two business days.`}
           />
         </ScrollReveal>
 
@@ -143,12 +143,6 @@ export function Contact({ email, socials }: Props) {
                     </span>
                   ) : null}
                 </div>
-                {!formAction ? (
-                  <p className="text-xs text-muted">
-                    Set <code className="rounded bg-foreground/10 px-1">VITE_FORMSPREE_ID</code>{' '}
-                    in <code className="rounded bg-foreground/10 px-1">.env</code> to enable Formspree.
-                  </p>
-                ) : null}
               </form>
             </SpotlightCard>
           </ScrollReveal>
@@ -183,7 +177,7 @@ export function Contact({ email, socials }: Props) {
                   Availability
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
-                  Open to full-time roles and selective contract work (US/EU time zones).
+                  Open to full-time roles and selective contract work.
                 </p>
               </div>
             </div>

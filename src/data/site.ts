@@ -4,9 +4,15 @@ export type Project = {
   id: string
   title: string
   description: string
+  longDescription: string
   image: string
+  screenshots: string[]
   tech: string[]
+  features: string[]
+  challenges: string
+  role: string
   liveUrl?: string
+  githubUrl?: string
   caseStudyUrl?: string
 }
 
@@ -52,8 +58,8 @@ export const profile = {
   email: 'mouallou279@gmail.com',
   whatsapp: '212776440786',
   location: 'Remote / Worldwide',
-  bio: `I’m Mohamed Ouallou, a Full-Stack Web Developer based in Tangier, Morocco. I build modern, high-performance web applications and turn ideas into real digital products.
-With a strong foundation in backend development, I work with React, Laravel, Node.js and APIs to create scalable and user-friendly solutions. I’m passionate about clean code, great UI/UX, and continuous learning.`,
+  bio: `I'm Mohamed Ouallou, a Full-Stack Web Developer based in Tangier, Morocco. I build modern, high-performance web applications and turn ideas into real digital products.
+With a strong foundation in frontend and backend development, I work with React, Laravel, Node.js and APIs to create scalable and user-friendly solutions. I'm passionate about clean code, great UI/UX, and continuous learning.`,
   resumeUrl: '#',
   portraitSrc: '/img-2.jpg',
 }
@@ -84,46 +90,95 @@ export const logoRow = [
 
 export const projects: Project[] = [
   {
-    id: '1',
-    title: 'Crypto trading dashboard',
+    id: 'AI Agency',
+    title: 'AI Agency',
     description:
-      'Real-time portfolio analytics, risk widgets, and low-latency charts for active traders.',
+      'AI Agency is a platform that provides AI-powered solutions for businesses.',
+    longDescription:
+      'AI Agency is a web platform that showcases AI-related services for businesses. It was built as a learning project to practice React fundamentals, component structure, and responsive UI design.',
     image:
-      'https://images.unsplash.com/photo-1642543499460-20d28c886b3b?w=1200&q=80&auto=format&fit=crop',
-    tech: ['React', 'TypeScript', 'Node.js', 'WebSockets'],
-    liveUrl: '#',
+      '/ProjectPictures/reactProject.jpg',
+    screenshots: [
+      '/ProjectPictures/reactProject.jpg',
+    ],
+    tech: ['React', 'JavaScript', 'Vite', 'npm', 'React Hot Toast', 'Motion 12', 'Tailwind CSS 4', 'Preline UI'],
+    features: [
+      'Built reusable React components using props and state',
+      'Implemented basic UI layout with responsive design',
+      'Handled user interactions using event handlers',
+      'Managed component state using useState hook',
+      'Structured project with clean component hierarchy',
+    ],
+    challenges:
+      'The main challenge was learning how to manage React state efficiently while keeping the UI responsive. I faced issues with unnecessary re-renders and learned how to optimize component updates using proper state structure and React best practices.',
+    role: 'Full-Stack Developer',
+    liveUrl: 'https://ai-aagency.netlify.app/',
+    githubUrl: 'https://github.com/Med-Ouallou/React/tree/project-1/project-1',
   },
   {
-    id: '2',
-    title: 'Team project hub',
+    id: 'Restaurant website management',
+    title: 'Restaurant Website Management',
     description:
-      'Kanban, milestones, and automations that keep distributed teams aligned without noise.',
+      'A restaurant management web application built with Laravel to learn how to consume API.',
+
+    longDescription:
+      'This project is a restaurant management system built with Laravel. It was developed as a learning project to practice backend fundamentals including authentication, authorization, and role management. The project also includes UI integration using Laravel Blade and Alpine.js for interactive components.',
+
     image:
-      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&q=80&auto=format&fit=crop',
-    tech: ['Next.js', 'Tailwind', 'PostgreSQL'],
+      '/ProjectPictures/resto-1.jpg',
+
+    screenshots: [
+      '/ProjectPictures/resto-1.jpg',
+      '/ProjectPictures/resto-2.jpg',
+      '/ProjectPictures/resto-3.jpg',
+      '/ProjectPictures/resto-4.jpg',
+    ],
+
+    tech: ['REST API','Laravel', 'Blade', 'MySQL', 'Spatie Permission', 'Alpine.js' , 'authentication/authorization'],
+
+    features: [
+      'User authentication and registration system',
+      'Role-based access control using Spatie Permission',
+      'Admin dashboard for managing restaurant data',
+      'Menu and order management system',
+      'Interactive UI components using Alpine.js',
+    ],
+
+    challenges:
+      'The main challenge was implementing authentication and role-based authorization using Laravel. I learned how to structure permissions with Spatie and manage secure access for different user roles like admin and staff.',
+
+    role: 'Backend Developer (Laravel)',
     liveUrl: '#',
-    caseStudyUrl: '#',
+    githubUrl: 'https://github.com/Med-Ouallou/projet-finale-PFF/tree/develop/restaurant-system',
   },
   {
-    id: '3',
+    id: 'analytics-control-center',
     title: 'Analytics control center',
     description:
       'Unified funnels, cohort exploration, and exportable reports for growth teams.',
+    longDescription:
+      'An analytics platform that unifies funnel analysis, cohort exploration, and customizable reporting for growth and product teams. Users can build complex queries through a visual interface, explore user behavior across segments, and export publication-ready reports — all without writing SQL.',
     image:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop',
+    screenshots: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80&auto=format&fit=crop',
+    ],
     tech: ['React', 'D3', 'Python'],
+    features: [
+      'Visual query builder for complex analytics',
+      'Funnel analysis with step-by-step conversion rates',
+      'Cohort retention tables with flexible date ranges',
+      'Exportable PDF/CSV reports with branding',
+      'Interactive D3-powered charts and heatmaps',
+    ],
+    challenges:
+      'Building a performant query builder UI that translates visual blocks into optimized SQL was the biggest hurdle. I designed an AST-based intermediate representation that compiles to database queries, enabling complex multi-step funnels without performance degradation.',
+    role: 'Frontend Lead',
     liveUrl: '#',
-  },
-  {
-    id: '4',
-    title: 'Indie game studio site',
-    description:
-      'Cinematic marketing site with CMS-driven releases, press kit, and newsletter.',
-    image:
-      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80&auto=format&fit=crop',
-    tech: ['Astro', 'Contentful', 'Vercel'],
-    liveUrl: '#',
-  },
+    githubUrl: '#',
+  }
 ]
 
 

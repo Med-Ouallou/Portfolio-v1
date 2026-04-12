@@ -40,7 +40,7 @@ export function Button({
   }
 
   return (
-    <button type={type} className={cls} {...rest}>
+    <button type={type} className={cls} {...rest} >
       {children}
     </button>
   )

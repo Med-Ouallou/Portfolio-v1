@@ -54,7 +54,7 @@ export function Home() {
         <Hero />
         <About />
         <TechStack categories={skillCategories} />
-        <Projects projects={projects} />
+        <Projects projects={projects.slice(0, 4)} />
         <Experience entries={experience} />
         <Contact email={profile.email} socials={socialLinks} />
         <Footer
