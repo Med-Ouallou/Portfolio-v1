@@ -25,10 +25,10 @@ export function Home() {
       <DotGrid fixed />
       <BackToTop whatsapp={profile.whatsapp} />
       <PillNav
-        logoText="MA"
+        logoText=""
         items={navItems}
         baseColor="var(--foreground)"
-        pillColor="rgba(255,255,255,0.08)"
+        pillColor="rgba(40, 33, 33, 0.08)"
         pillTextColor="var(--foreground)"
         hoveredPillTextColor="var(--surface)"
       >
