@@ -6,18 +6,18 @@ import { profile } from '../data/site'
 
 const highlights = [
   {
-    title: 'Systems thinking',
-    body: 'From schema design to component APIs, I optimize for clarity and long-term velocity.',
+    title: 'Agile & Scrum',
+    body: 'I work in Agile environments using Scrum methodology, focusing on collaboration, sprints, and continuous delivery.',
     icon: FiLayers,
   },
   {
-    title: 'Performance culture',
-    body: 'Core Web Vitals, caching, and bundle discipline are part of every release.',
+    title: 'Design Thinking',
+    body: 'I approach problems with a user-centered mindset, using design thinking to analyze, prototype, and solve real-world challenges.',
     icon: FiCpu,
   },
   {
-    title: 'Product partnership',
-    body: 'I translate goals into roadmaps, prototypes, and measurable outcomes.',
+    title: 'Problem Solving',
+    body: 'I enjoy breaking down complex problems and building efficient, scalable solutions with clean and maintainable code.',
     icon: FiCode,
   },
 ]

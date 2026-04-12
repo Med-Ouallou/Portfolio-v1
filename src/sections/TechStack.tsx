@@ -1,15 +1,16 @@
 import type { ComponentType } from 'react'
 import { FiCloud } from 'react-icons/fi'
+import { VscVscode } from "react-icons/vsc";
 import {
-  SiAstro,
   SiDocker,
   SiFigma,
-  SiGithubactions,
-  SiGraphql,
+  SiPostman,
   SiLaravel,
   SiNextdotjs,
   SiNodedotjs,
-  SiPostgresql,
+  SiGithub,
+  SiMysql,
+  SiGooglegemini,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -26,15 +27,14 @@ const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   'Tailwind CSS': SiTailwindcss,
   'Node.js': SiNodedotjs,
   Laravel: SiLaravel,
-  PostgreSQL: SiPostgresql,
-  'REST & GraphQL': SiGraphql,
+  'MySQL' : SiMysql,
+  'REST API': SiPostman,
   Docker: SiDocker,
-  'GitHub Actions': SiGithubactions,
+  'AI Tools': SiGooglegemini,
+  'Git - GitHub': SiGithub,
+  'VS Code': VscVscode,
   Figma: SiFigma,
   AWS: FiCloud,
-  Astro: SiAstro,
-  Contentful: SiAstro,
-  Vercel: SiNextdotjs,
 }
 
 type Props = {

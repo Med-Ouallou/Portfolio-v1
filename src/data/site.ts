@@ -52,7 +52,8 @@ export const profile = {
   email: 'mouallou279@gmail.com',
   whatsapp: '212776440786',
   location: 'Remote / Worldwide',
-  bio: `I'm a fullstack developer who bridges product thinking with solid engineering. I enjoy turning ambiguous problems into clear systems, clean APIs, and interfaces that feel effortless.`,
+  bio: `I’m Mohamed Ouallou, a Full-Stack Web Developer based in Tangier, Morocco. I build modern, high-performance web applications and turn ideas into real digital products.
+With a strong foundation in backend development, I work with React, Laravel, Node.js and APIs to create scalable and user-friendly solutions. I’m passionate about clean code, great UI/UX, and continuous learning.`,
   resumeUrl: '#',
   portraitSrc: '/img-2.jpg',
 }
@@ -68,7 +69,7 @@ export const navItems: NavItem[] = [
 
 export const heroTags = [
   { label: 'UI/UX craft', position: 'top-0 -right-2 sm:right-0' },
-  { label: '5+ years exp', position: 'bottom-8 -left-4 sm:left-0' },
+  { label: '2+ years exp', position: 'bottom-8 -left-4 sm:left-0' },
   { label: 'Frontend & API', position: 'top-1/3 -left-6 sm:-left-8' },
 ]
 
@@ -129,27 +130,27 @@ export const projects: Project[] = [
 export const experience: ExperienceEntry[] = [
   {
     id: 'e1',
-    title: 'Senior Fullstack Engineer',
-    organization: 'Remote SaaS',
-    period: '2022 — Present',
+    title: 'Full-Stack Web Developer (In Progress)',
+    organization: 'SoliCode - Bootcamp Training Center',
+    period: '2025 — Present',
     description:
-      'Led feature squads across React and Node services, CI/CD hardening, and design-system adoption.',
+      'Training in modern web technologies including React, PHP, APIs, and working in Agile teams on real-world projects.',
   },
   {
     id: 'e2',
-    title: 'Fullstack Developer',
-    organization: 'Digital Agency',
-    period: '2019 — 2022',
+    title: 'Specialized Technician in IT Development',
+    organization: 'MIAGE TANGER',
+    period: '2023 — 2025',
     description:
-      'Built marketing sites and custom admin tools for clients in fintech and e-commerce.',
+      'Focused on backend development, MVC architecture, database design, and building desktop applications using Java and JavaFX.',
   },
   {
     id: 'e3',
-    title: 'B.Sc. Computer Science',
-    organization: 'University',
-    period: '2015 — 2019',
+    title: 'Baccalaureate in Physical Sciences',
+    organization: 'Allal Fassi High School',
+    period: '2022 — 2023',
     description:
-      'Coursework in algorithms, databases, and human-computer interaction.',
+      '',
   },
 ]
 
@@ -170,8 +171,8 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: 'Node.js' },
       { name: 'Laravel' },
-      { name: 'PostgreSQL' },
-      { name: 'REST & GraphQL' },
+      { name: 'MySQL' },
+      { name: 'REST API' },
     ],
   },
   {
@@ -179,9 +180,10 @@ export const skillCategories: SkillCategory[] = [
     title: 'Tools',
     items: [
       { name: 'Docker' },
-      { name: 'GitHub Actions' },
+      { name: 'Git - GitHub' },
       { name: 'Figma' },
-      { name: 'AWS' },
+      { name: 'AI Tools' },
+      { name: 'VS Code' },
     ],
   },
 ]
