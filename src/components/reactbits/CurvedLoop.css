@@ -26,3 +26,17 @@
   font-size: 3.5rem;
   fill: var(--foreground);
 }
+
+@media (max-width: 768px) {
+  .curved-loop-svg, 
+  .curved-loop-svg .curved-loop-text {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .curved-loop-svg, 
+  .curved-loop-svg .curved-loop-text {
+    font-size: 7rem;
+  }
+}

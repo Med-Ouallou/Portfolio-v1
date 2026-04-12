@@ -168,8 +168,8 @@ export function PillNav({
   } as React.CSSProperties
 
   return (
-    <div className="pill-nav-container" style={cssVars}>
-      <nav className={`pill-nav ${className}`} aria-label="Primary">
+    <div className={`pill-nav-container ${className}`} style={cssVars}>
+      <nav className="pill-nav" aria-label="Primary">
         {logo ? (
           <a
             className="pill-logo"
