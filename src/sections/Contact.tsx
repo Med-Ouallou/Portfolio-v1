@@ -27,7 +27,7 @@ const socialIcon = (icon: SocialLink['icon']) => {
   }
 }
 
-export function Contact({ email, socials }: Props) {
+export function Contact({socials }: Props) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>(
     'idle',
   )
