@@ -60,7 +60,7 @@ export const profile = {
   location: 'Remote / Worldwide',
   bio: `I'm Mohamed Ouallou, a Full-Stack Web Developer based in Tangier, Morocco. I build modern, high-performance web applications and turn ideas into real digital products.
 With a strong foundation in frontend and backend development, I work with React, Laravel, Node.js and APIs to create scalable and user-friendly solutions. I'm passionate about clean code, great UI/UX, and continuous learning.`,
-  resumeUrl: '#',
+  resumeUrl: '/Mohamed_Ouallou_CV.pdf',
   portraitSrc: '/img-2.jpg',
 }
 
@@ -134,7 +134,7 @@ export const projects: Project[] = [
       '/ProjectPictures/resto-4.jpg',
     ],
 
-    tech: ['REST API','Laravel', 'Blade', 'MySQL', 'Spatie Permission', 'Alpine.js' , 'authentication/authorization'],
+    tech: ['REST API', 'Laravel', 'Blade', 'MySQL', 'Spatie Permission', 'Alpine.js', 'authentication/authorization'],
 
     features: [
       'User authentication and registration system',
