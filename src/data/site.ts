@@ -90,6 +90,64 @@ export const logoRow = [
 
 export const projects: Project[] = [
   {
+    id: 'dentist-website-dr-ghali',
+    title: 'Cabinet Dentaire Dr. Ghali',
+    description:
+      'A premium multidisciplinary dental clinic website featuring interactive before/after transformation sliders, a rich photo gallery, and online booking.',
+    longDescription:
+      'A high-performance showcase website built for Dr. Benjebara Ghali, a multidisciplinary dental clinic based in Tangier, Morocco. The platform integrates interactive before/after smile comparison sliders, a responsive gallery of state-of-the-art clinic equipment, and direct communication channels to streamline patient acquisition and appointment booking.',
+    image:
+      '/ProjectPictures/dr-1.jpg',
+    screenshots: [
+      '/ProjectPictures/dr-1.jpg',
+      '/ProjectPictures/dr-2.jpg',
+      '/ProjectPictures/dr-3.jpg',
+    ],
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    features: [
+      'Interactive before/after sliders comparing clinical smile restorations',
+      'Custom image optimization for high-resolution clinical photographs',
+      'Responsive design with localized language toggling',
+      'Detailed services showcase covering implants, orthodontics, and cosmetic surgery',
+      'Online appointment call-to-actions with direct WhatsApp and phone integration',
+    ],
+    challenges:
+      'Optimizing image delivery for high-quality clinical photographs and before/after transformation sliders was a primary challenge. Implemented Next.js Image optimization, lazy loading, and fine-tuned responsive layout structures to achieve perfect performance score (LCP) while presenting beautiful, high-resolution aesthetic medical imagery.',
+    role: 'Full-stack Developer',
+    liveUrl: 'https://dentist-website-dr-ghali.vercel.app/',
+    githubUrl: 'https://github.com/Med-Ouallou/dentist-website',
+  },
+  {
+    id: 'intelligent-recruitment',
+    title: 'Intelligent Recruitment',
+    description:
+      'AI-powered recruitment platform featuring bidirectional matching, Explainable AI (XAI), and proof-based hiring via GitHub.',
+    longDescription:
+      'An innovative AI-powered recruitment platform that enables bidirectional candidate-role matching. By integrating Explainable AI (XAI), the platform provides transparency into matching recommendations. It features proof-based hiring through Git & GitHub integration to verify developers\' hands-on capabilities, backed by automated workflows built on n8n.',
+    image:
+      '/ProjectPictures/iksa-2.jpg',
+    screenshots: [
+      '/ProjectPictures/iksa-1.jpg',
+      '/ProjectPictures/iksa-2.jpg',
+      '/ProjectPictures/iksa-3.jpg',
+      '/ProjectPictures/iksa-4.jpg',
+      '/ProjectPictures/iksa-5.jpg',
+    ],
+    tech: ['React', 'Next.js', 'TypeScript', 'Node.js', 'MySQL', 'Prisma', 'NLP', 'n8n'],
+    features: [
+      'Bidirectional AI-powered candidate and job role matching',
+      'Explainable AI (XAI) engine showing transparency for recommended matches',
+      'Proof-based hiring via direct Git and GitHub profile integration',
+      'Automated recruitment workflows and orchestration built using n8n',
+      'Detailed dashboard for recruiters to analyze skills and profiles',
+    ],
+    challenges:
+      'Designing an explainable matching algorithm that provides human-readable reasons for scoring candidate profiles was a key challenge. This was solved by integrating NLP parser insights and structured profile attributes, translating complex vector match scores into clear, verifiable explanations for recruiters.',
+    role: 'Full-stack Developer',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/BenTaleb-Mehdi/intelligent-recruitment',
+  },
+  {
     id: 'AI Agency',
     title: 'AI Agency',
     description:
@@ -150,34 +208,6 @@ export const projects: Project[] = [
     role: 'Backend Developer (Laravel)',
     liveUrl: '#',
     githubUrl: 'https://github.com/Med-Ouallou/projet-finale-PFF/tree/develop/restaurant-system',
-  },
-  {
-    id: 'analytics-control-center',
-    title: 'Analytics control center',
-    description:
-      'Unified funnels, cohort exploration, and exportable reports for growth teams.',
-    longDescription:
-      'An analytics platform that unifies funnel analysis, cohort exploration, and customizable reporting for growth and product teams. Users can build complex queries through a visual interface, explore user behavior across segments, and export publication-ready reports — all without writing SQL.',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop',
-    screenshots: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80&auto=format&fit=crop',
-    ],
-    tech: ['React', 'D3', 'Python'],
-    features: [
-      'Visual query builder for complex analytics',
-      'Funnel analysis with step-by-step conversion rates',
-      'Cohort retention tables with flexible date ranges',
-      'Exportable PDF/CSV reports with branding',
-      'Interactive D3-powered charts and heatmaps',
-    ],
-    challenges:
-      'Building a performant query builder UI that translates visual blocks into optimized SQL was the biggest hurdle. I designed an AST-based intermediate representation that compiles to database queries, enabling complex multi-step funnels without performance degradation.',
-    role: 'Frontend Lead',
-    liveUrl: '#',
-    githubUrl: '#',
   }
 ]
 
